@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Codificador</title>
+</head>
+<body>
+    <h1>Codificador</h1>
+    <main class="main-container">
+    <div class="encrypt-area">
+        <textarea type="text" name="area" rows="40" cols="180" required placeholder="Ingrese el mensaje aqui"></textarea> 
+    </div>
+    <div class="requisitos"><p>Solo letras minusculas y sin acento</p></div>
+    <div class="btn">
+        <input type="submit" value="Codificar" onclick="encrypt()">
+        <input type="submit" value="Decodificar" onclick="decrypt()"> 
+    </div>
+    <div class="resultado">
+        <img src="images/encrypt.png" alt="">
+        <h2>Ningun mensaje fue encontrado</h2>
+        <p id="msj">Ingresa el texto que desees encriptar o desencriptar.</p>
+    </div>
+    </main>
+</body>
+<script src="js/codificar.js">
+    
+</script>
+</html>

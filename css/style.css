@@ -1,0 +1,23 @@
+.main-container{
+    
+    padding: 40px;
+}
+.encrypt-area{
+    border: solid;
+    margin: auto;
+}
+textarea{
+    resize: none;
+    columns: 4;
+    border: none;
+}
+.resultado{ 
+    border: solid;
+    background-color: aqua;
+    margin: auto;
+}
+
+::placeholder {
+    color: blue;
+    opacity: 1;
+  }
