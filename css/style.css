@@ -1,23 +1,258 @@
 .main-container{
-    
-    padding: 40px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F1F0EA;
 }
-.encrypt-area{
-    border: solid;
-    margin: auto;
+.msj-text{
+   position: absolute;
+   width: 40%;
+   height: 60%;
+   left: 12%;
+   top: 15%;
+   border: none;
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 150%;
+   resize: none;
+   background-color: #F1F0EA;
+   color: #000000;
 }
-textarea{
-    resize: none;
-    columns: 4;
-    border: none;
-}
-.resultado{ 
-    border: solid;
-    background-color: aqua;
-    margin: auto;
-}
-
-::placeholder {
-    color: blue;
-    opacity: 1;
+.msj-text::placeholder {
+    color: #767B91;
   }
+  .msj-text:focus,
+  .msj-text:active{
+    border: none;
+    outline: none;
+  }
+.icon{
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+    color: #5b437f;
+  }
+.rule{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 13%;
+    top: 80%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 19px;
+    line-height: 19px;
+    color: #767B91;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 83%
+}
+.encrypt-btn{
+ justify-content: center;
+ align-items: center;
+ margin-right: 0.3%;
+ padding: 2%;
+ gap: 8%;
+ width: 25%;
+ background-color: #490B84;
+ border-radius: 24px;
+ font-family: 'PT Sans', sans-serif;
+ font-size: 18px;
+ line-height: 19px;
+ text-align: center;
+ color: aliceblue;
+ border: none;
+}
+.decrypt-btn{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 2%;
+gap: 8%;
+width: 25%;
+background-color: #767B91;
+border: 1px solid #881DED;
+border-radius: 24px;
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 19px;
+text-align: center;
+color:#881DED;
+}
+.encrypt-btn:hover,.decrypt-btn:hover{
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background-color: #FFFFFF;
+    box-shadow: -2px 6px 20px 2px rgba(0,0,0,0.44);
+    border-radius: 32px;
+}
+.msj-encrypt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+}
+.msj-encrypt h2{
+    width: 60%;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #767B91;
+    margin: 0;
+}
+.msj-encrypt span{
+    margin: 0;
+    width: 80%;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 20px;    
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+}
+.result img{
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    top: 15%;
+}
+.cbtn{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    
+}
+.copy-btn{
+    padding: 30%;
+    background-color: #490B84;
+    border-radius: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+    border: none;
+    visibility:hidden;
+    
+}
+footer{
+    font-family: 'PT Sans', sans-serif;
+    padding-top: .5%;
+    text-align: center;
+    background-color: #490B84;
+}
+footer p{
+    margin: 0;
+}
+/*responsive*/
+@media(max-width: 57.5em){
+    .main-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .encrypt-area{
+        width: 100%;
+
+    }
+    .msj-text{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top:5%;
+    }
+    .rule{
+        width: 80%;
+        left: 10%;
+        top:67%
+    }
+    .rule p{
+        font-size: 18px;
+    }
+    .btns{
+        width: 80%;
+        left:10%;
+        top:71%;
+    }
+    .encrypt-btn, .decrypt-btn{
+        width: 48%;
+        border-radius: 16px;
+    }
+    .encrypt-btn:hover, .decrypt-btn:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .result{
+        width: 80%;
+        height: 20%;
+        left:10%;
+        top:80%;
+    }
+    .msj-encrypt{
+        width: 100%;
+        top:5%;
+    }
+    .result img{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+    .cbtn{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 70%;
+        width: 80%;
+        
+    }
+    .copy-btn{
+        padding: 1.8%;
+        background-color: #490B84;
+        border-radius: 16px;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: aliceblue;
+        border: none;
+        visibility:hidden;
+        
+    }
+    footer {
+        margin-top: 5%;
+    }
+
+}

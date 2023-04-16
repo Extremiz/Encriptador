@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Codificador</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/cb66408dc2.js" crossorigin="anonymous"></script>
+    <title>Encriptador</title>
 </head>
-<body>
-    <h1>Codificador</h1>
+<body>  
     <main class="main-container">
     <div class="encrypt-area">
-        <textarea type="text" name="area" rows="40" cols="180" required placeholder="Ingrese el mensaje aqui"></textarea> 
+        <textarea id="msj" class="msj-text" type="text" name="msj-text" rows="40" cols="60" required placeholder="Ingrese el mensaje aqui"></textarea> 
     </div>
-    <div class="requisitos"><p>Solo letras minusculas y sin acento</p></div>
-    <div class="btn">
-        <input type="submit" value="Codificar" onclick="encrypt()">
-        <input type="submit" value="Decodificar" onclick="decrypt()"> 
+    <i class="fa-solid fa-circle-exclamation icon"></i>  
+    <div class="rule"><p>Solo letras minusculas y sin acento</p></div>
+    <div class="btns">
+        <input class="encrypt-btn" type="submit" value="Codificar" onclick="encrypt()">
+        <input class="decrypt-btn" type="submit" value="Decodificar" onclick="decrypt()"> 
     </div>
-    <div class="resultado">
-        <img src="images/encrypt.png" alt="">
-        <h2>Ningun mensaje fue encontrado</h2>
-        <p id="msj">Ingresa el texto que desees encriptar o desencriptar.</p>
+    <div class="result">
+        <img id="nomsj" src="images/encrypt.png" alt="">
+        <div class="msj-encrypt">
+            <h2 id="title">Ningun mensaje fue encontrado</h2>
+            <span id="msj-result" class="msj-result">Ingresa el texto que desees encriptar o desencriptar.</span>
+        </div>
+        <div class="cbtn"><input type="submit" class="copy-btn" value="copiar" onclick="copy()" id ="copy-btn"></div>
     </div>
     </main>
+    <footer>
+        <p>Copyright Cristian Zini - 2023</p>
+    </footer>
 </body>
-<script src="js/codificar.js">
-    
-</script>
+    <script src="js/codificar.js"></script>
 </html>
