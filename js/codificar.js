@@ -14,11 +14,11 @@ function encrypt(){
     if (texto.length != 0){
         tituloMensaje.textContent = "Texto encriptado con exito";
         parrafo.textContent = textoCifrado;
-        muneco.src = "/images/done.png";
+        muneco.src = "./images/done.png";
         copiarbtn.style.visibility ="visible";
         copiarbtn.value = "Copiar";
     }else{
-        muneco.src = "/images/encrypt.png";
+        muneco.src = "./images/encrypt.png";
         tituloMensaje.textContent = "Ningun mensaje fue encontrado";
         parrafo.textContent = "Ingresa el texto que desees encriptar o desencriptar.";
         swal("error", "Debes ingresar un texto para encriptar", "warning");
@@ -41,11 +41,11 @@ function decrypt(){
     if (texto.length != 0){
         tituloMensaje.textContent = "Texto desencriptado con exito";
         parrafo.textContent = textoCifrado;
-        muneco.src = "/images/done.png";
+        muneco.src = "./images/done.png";
         copiarbtn.style.visibility ="visible";
         copiarbtn.value = "Copiar";
     }else{
-        muneco.src = "/images/encrypt.png";
+        muneco.src = "./images/encrypt.png";
         tituloMensaje.textContent = "Ningun mensaje fue encontrado";
         parrafo.textContent = "Ingresa el texto que desees encriptar o desencriptar.";
         swal("error", "Debes ingresar un texto para desencriptar", "warning");
